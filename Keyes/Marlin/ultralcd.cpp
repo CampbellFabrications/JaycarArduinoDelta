@@ -356,6 +356,9 @@ static void lcd_main_menu()
 #endif // DELTA_CALIBRATION_MENU
     }
     MENU_ITEM(submenu, MSG_CONTROL, lcd_control_menu);
+    //CUSTOM CODE
+    MENU_ITEM(submenu, MSG_ABOUT_MACHINE, lcd_about_printer);
+    //END CUSTOM CODE
 #ifdef SDSUPPORT
     if (card.cardOK)
     {
@@ -379,9 +382,7 @@ static void lcd_main_menu()
 #endif
     }
 #endif
-    //CUSTOM CODE
-    MENU_ITEM(submenu, MSG_ABOUT_MACHINE, lcd_about_printer);
-    //END CUSTOM CODE
+    
     END_MENU();
 }
 
